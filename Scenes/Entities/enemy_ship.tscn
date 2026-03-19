@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://b4xc1fcbyamth"]
+[gd_scene load_steps=2 format=3 uid="uid://b4xc1fcbyamth"]
 
-[node name="EnemyShip" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://d0ry4rve5yttv" path="res://Assets/Sprites/EnemyShip/enemy_ship_full_health.png" id="1_y1k4s"]
+
+[node name="EnemyShip" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_top = -14.0
+offset_right = 14.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_y1k4s")

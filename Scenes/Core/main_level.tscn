@@ -1,16 +1,17 @@
-[gd_scene format=3 uid="uid://8ywinkayvs4m"]
+[gd_scene load_steps=5 format=3 uid="uid://8ywinkayvs4m"]
 
 [ext_resource type="PackedScene" uid="uid://gquhiq2rxcqg" path="res://Scenes/World/game_area.tscn" id="1_jhkjf"]
 [ext_resource type="PackedScene" uid="uid://dpc7eb0ardvw2" path="res://Scenes/UI/shop_alien_area.tscn" id="2_s2sig"]
 [ext_resource type="PackedScene" uid="uid://c7efonthk4mum" path="res://Scenes/UI/stats_and_upgrades_area.tscn" id="3_pp4qn"]
+[ext_resource type="PackedScene" uid="uid://b4xc1fcbyamth" path="res://Scenes/Entities/enemy_ship.tscn" id="4_pp4qn"]
 
-[node name="MainLevel" type="Control" unique_id=1736181297]
+[node name="MainLevel" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 240.0
 
-[node name="UI" type="HBoxContainer" parent="." unique_id=1112222392]
+[node name="UI" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,29 +21,35 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GameWrapper" type="PanelContainer" parent="UI" unique_id=865091925]
+[node name="GameWrapper" type="PanelContainer" parent="UI"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="GameArea" parent="UI/GameWrapper" unique_id=1892684322 instance=ExtResource("1_jhkjf")]
+[node name="GameArea" parent="UI/GameWrapper" instance=ExtResource("1_jhkjf")]
 layout_mode = 2
 
-[node name="RightUI" type="VBoxContainer" parent="UI" unique_id=1651574433]
+[node name="RightUI" type="VBoxContainer" parent="UI"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ShopArea" type="PanelContainer" parent="UI/RightUI" unique_id=1954438718]
+[node name="ShopArea" type="PanelContainer" parent="UI/RightUI"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 104.0
 
-[node name="ShopAlienArea" parent="UI/RightUI/ShopArea" unique_id=1662566010 instance=ExtResource("2_s2sig")]
+[node name="ShopAlienArea" parent="UI/RightUI/ShopArea" instance=ExtResource("2_s2sig")]
 layout_mode = 2
 
-[node name="StatsAndUpgrades" type="PanelContainer" parent="UI/RightUI" unique_id=1094524000]
+[node name="StatsAndUpgrades" type="PanelContainer" parent="UI/RightUI"]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 136.0
 
-[node name="StatsAndUpgradesArea" parent="UI/RightUI/StatsAndUpgrades" unique_id=1335361586 instance=ExtResource("3_pp4qn")]
+[node name="StatsAndUpgradesArea" parent="UI/RightUI/StatsAndUpgrades" instance=ExtResource("3_pp4qn")]
 layout_mode = 2
+
+[node name="EnemyShip" parent="." instance=ExtResource("4_pp4qn")]
+offset_left = 76.0
+offset_top = 140.0
+offset_right = 96.0
+offset_bottom = 160.0
