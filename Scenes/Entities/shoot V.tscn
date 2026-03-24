@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://br725jyxlnkvf"]
+
+[ext_resource type="Script" uid="uid://cc68ueb4jek1d" path="res://Scripts/Entities/AlienBase.gd" id="1_ak1i4"]
+[ext_resource type="Texture2D" uid="uid://buv5r4dcrqcpj" path="res://icon.svg" id="2_yerru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4je8k"]
+size = Vector2(16, 16)
+
+[node name="alien base" type="Node2D" unique_id=208843511]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1962264821]
+script = ExtResource("1_ak1i4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1481764884]
+shape = SubResource("RectangleShape2D_4je8k")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=1296904060]
+position = Vector2(-5.811453e-07, 2.9802322e-08)
+scale = Vector2(0.12499999, 0.125)
+texture = ExtResource("2_yerru")

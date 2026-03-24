@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://mjhhwbdxuev6"]
+
+[ext_resource type="Script" uid="uid://dhu7nq3olx6y4" path="res://bullet.gd" id="1_f2pg4"]
+[ext_resource type="Texture2D" uid="uid://buv5r4dcrqcpj" path="res://icon.svg" id="2_d56by"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e362"]
+size = Vector2(13, 69)
+
+[node name="bala" type="Node2D" unique_id=1695905266]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1929927406]
+script = ExtResource("1_f2pg4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=515803045]
+shape = SubResource("RectangleShape2D_0e362")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=433780123]
+scale = Vector2(0.062499996, 0.5)
+texture = ExtResource("2_d56by")
